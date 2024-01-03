@@ -1,9 +1,9 @@
 
 
-import { createFooter } from '../HBOMAX/components/footer/footer'
+import { createFooter } from '../HBOMAX/components/footer/footer.js'
 
 
-import { createstartPageHbo} from './components/startPage/startPage'
+import { createstartPageHbo} from './components/startPage/startPage.js'
 
 import './style.css'
 
