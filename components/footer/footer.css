@@ -1,0 +1,35 @@
+footer{
+  background: linear-gradient(to bottom, #000000, #353544);
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  height: 10svh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+z-index: 2;
+transition: opacity 2s ease-in-out; 
+
+}
+footer img{
+width: 40px;
+height: 40px;
+cursor: pointer;
+}
+footer img:hover{
+  scale: 1.1;
+}
+
+.encender{
+  opacity: 1;
+}
+.apagar{
+  opacity: 0;
+}
+
+@media(max-width:374px){
+  footer img{
+    width: 25px;
+    height: 25px;
+  }
+}

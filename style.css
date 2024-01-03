@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --nsr--color1: red;
+  --nsr--color2: green;
+  --nsr--color3: yellow;
+  --nsr--color4: blue;
+  --nsr--color5:brown;
+}
+
+
+

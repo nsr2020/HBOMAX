@@ -1,0 +1,65 @@
+.sectionType{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+ width: 100%;
+ gap: 20px;
+ background-color: #d9abc8;
+background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+}
+
+.sectionType h4{
+  color: rgb(170, 230, 226);
+}
+.sectionType p{
+  color: chocolate;
+  font-weight: bolder;
+}
+
+
+.article1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 350px;
+  border: 5px solid black;
+  background-color: #131513;
+background-image: url("https://www.transparenttextures.com/patterns/basketball.png");
+gap: 5px;
+border-radius: 10px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.divImg1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 190px;
+  animation: changeColor 8s infinite;
+  border-radius: 10px;
+}
+
+.divImg1 img{
+width: 140px;
+height: 180px;
+border-radius: 10px;
+}
+.divBtns button{
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  cursor: pointer;
+}
+.divBtns{
+  display: flex;
+  gap: 20px;
+}
+
+@media(max-width:390px){
+  
+}
+

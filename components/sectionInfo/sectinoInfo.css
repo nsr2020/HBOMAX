@@ -1,0 +1,95 @@
+.sectionInfo{
+  width: 100%;
+  height: 100svh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(to right top, #87CEFA, #4682B4);;
+  gap: 25px;
+}
+.divImg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 150px;
+  border-radius: 100%;
+  animation: changeColor 8s infinite;
+}
+
+.divImg img{
+width: 190px;
+height: 140px;
+border-radius: 100%;
+transition: transform 1s ease-in-out;
+
+}
+.divImg img:hover{
+ transform: rotate(-45deg) scale(0.7);
+}
+
+.divInfo{
+  width: 400px;
+  display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ gap: 15px;
+}
+
+.divInfo h3{
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: var(--nsr--color1);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.divInfo p:first-of-type{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  text-align: justify;
+  color: var(--nsr--color5);
+  font-weight: bold;
+}
+.divInfo p:last-of-type{
+  font-weight: bolder;
+}
+.divBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.divBtn button{
+  
+  background-color:transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+@media (max-width:456px){
+  .divImg{
+ 
+    width: 150px;
+    height: 100px;
+    
+  }
+  
+  .divImg img{
+  width: 140px;
+  height: 90px;
+
+  
+  }
+  .divInfo p:first-of-type{
+    
+    font-size: 11px;
+
+  }
+  .divInfo{
+    width: 250px;
+  }
+
+
+}

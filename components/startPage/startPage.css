@@ -1,0 +1,80 @@
+#app{
+
+  height: 100svh;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #E8DAF1, #C4A4E5, #A377D2, #7F4BA6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* transition: transform 2s ease-in-out;  */
+  /* transform: translateX(0); */
+
+  transition: opacity 2s ease-in-out; 
+  
+}
+
+  .imghbo{
+    width: 150px;
+    height: 150px;
+    border-radius: 6px;
+    cursor: pointer;
+    animation: changeColor 10s infinite;
+  
+    box-shadow: 0 10px 20px black; /* Ajusta los valores según sea necesario */
+    
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(0);
+  
+  }
+
+ #app.apagar {
+    /* transform: translateX(100%) */
+    opacity: 0;
+  }
+
+  
+  .imghbo:hover{
+    transform: scale(0.95);;
+  }
+
+
+  
+  @keyframes changeColor {
+    0% {
+      box-shadow: inset
+        0 0 10px var(--nsr--color1),
+      inset  0 0 20px var(--nsr--color1),
+      inset  0 0 30px var(--nsr--color1),
+       inset 0 0 40px var(--nsr--color1);
+    }
+    25% {
+      box-shadow: inset
+        0 0 10px var(--nsr--color2),
+       inset 0 0 20px var(--nsr--color2),
+      inset  0 0 30px var(--nsr--color2),
+      inset  0 0 40px var(--nsr--color2);
+    }
+    50% {
+      box-shadow: inset
+        0 0 10px var(--nsr--color3),
+      inset  0 0 20px var(--nsr--color3),
+      inset  0 0 30px var(--nsr--color3),
+      inset  0 0 40px var(--nsr--color3);
+    }
+    75% {
+      box-shadow: inset
+        0 0 10px var(--nsr--color4),
+       inset 0 0 20px var(--nsr--color4),
+       inset 0 0 30px var(--nsr--color4),
+       inset 0 0 40px var(--nsr--color4);
+    }
+    100% {
+      box-shadow: inset
+        0 0 10px var(--nsr--color5),
+       inset 0 0 20px var(--nsr--color5),
+       inset 0 0 30px var(--nsr--color5),
+      inset  0 0 40px var(--nsr--color5);
+    }
+  }

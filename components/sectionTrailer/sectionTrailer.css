@@ -1,0 +1,47 @@
+.sectionTrailer{
+  width: 100%;
+  height: 100svh;
+  background-image: linear-gradient(to bottom, #442b0a, #000000); 
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionTrailer button{
+  border: none;
+  font-size: 30px;
+  background-color: transparent;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  cursor: pointer;
+}
+
+.divIframe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  width: 320px;
+  height: 320px;
+  animation: changeColor 10s infinite;
+ 
+}
+.divIframe iframe{
+  width: 300px ;
+  height: 300px;
+  border-radius: 5px;
+  
+
+}
+
+@media(max-width:345px){
+  .divIframe{
+    width: 270px;
+    height: 270px;
+  }
+  .divIframe iframe{
+    width: 250px;
+    height: 250px;
+  }
+}
