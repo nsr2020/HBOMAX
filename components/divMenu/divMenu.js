@@ -43,26 +43,33 @@ export const createDivMenu = () =>{
     li.appendChild(a)
     ul.append(li)
 
-    a.addEventListener("click", ()=>{
-      if (a.classList.contains( "Accion")){
-        console.log(a.classList);
-        divMenu.style.display="none"
-        sectionType.style.display="flex"
-        createSectionType(pelisAccion)
-      }else if(a.classList.contains ("Aventura")){
-        sectionType.style.display="flex"
-        divMenu.style.display="none"
-        createSectionType(pelisAventura)
-      }else if (a.classList.contains("Comedia")){
-        sectionType.style.display="flex"
-        divMenu.style.display="none"
-        createSectionType(pelisComedia)
-      }else{
-        sectionType.style.display="flex"
-        divMenu.style.display="none"
-        createSectionType(pelisTerror)
-      }
-    })
+    a.addEventListener("click", async () => {
+      await handleButtonClick();
+    });
+    
+    async function handleButtonClick() {
+      return new Promise(resolve => {
+        if (a.classList.contains("Accion")) {
+          console.log(a.classList);
+          divMenu.style.display = "none";
+          sectionType.style.display = "flex";
+          createSectionType(pelisAccion);
+        } else if (a.classList.contains("Aventura")) {
+          sectionType.style.display = "flex";
+          divMenu.style.display = "none";
+          createSectionType(pelisAventura);
+        } else if (a.classList.contains("Comedia")) {
+          sectionType.style.display = "flex";
+          divMenu.style.display = "none";
+          createSectionType(pelisComedia);
+        } else {
+          sectionType.style.display = "flex";
+          divMenu.style.display = "none";
+          createSectionType(pelisTerror);
+        }
+        resolve();
+      });
+    }
     
   }
 
@@ -97,7 +104,7 @@ export const createDivMenu = () =>{
         divMenu.style.display="none"
         sectionType.style.display="flex"
         createSectionType(seriesComedia)
-      }else{
+      }else if (a.classList.contains("Terror")){
         divMenu.style.display="none"
         sectionType.style.display="flex"
         createSectionType(seriesTerror)

@@ -15,20 +15,14 @@ export const createSectionTrailer = (trailer, number) =>{
   const btnAtras = document.createElement("button")
   const iframe = document.createElement("iframe")
 
-  iframe.src = trailer + "?autoplay=1";
-  iframe.width = "300px"
-  iframe.height= "300px"
-  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  iframe.allowFullscreen = true
-  /* iframe.sandbox = ""; */
+  
+    iframe.src = trailer + "?autoplay=1";
+    iframe.width = "300px"
+    iframe.height= "300px"
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    iframe.allowFullscreen = true
+    
 
-    iframe.addEventListener("load", function() {
-      // Manejar la carga del iframe
-  });
-  iframe.addEventListener("error", function(event) {
-    console.error("Error cargando el iframe:", event);
-  });
- 
 
   btnAtras.textContent ="❌"
   sectionTrailer.append(btnAtras)
@@ -39,7 +33,7 @@ export const createSectionTrailer = (trailer, number) =>{
 
   btnAtras.addEventListener("click", ()=>{
 
-    iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    
     if (number === 1){
       
     sectionType.style.display="flex"

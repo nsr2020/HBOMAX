@@ -15,8 +15,8 @@ export const seriesTerror = [
     }
   },
   {
-    id: "La Brea",
-    titulo: "A todo Gas 2",
+    id: "st2",
+    titulo: "La Brea",
     informacion: "Serie de TV (2021-2024). 3 temporadas. 30 episodios. Un agujero gigantesco, de origen inexplicable, destruye Los Ángeles y separa a una familia en dos mundos distintos.",
     precio: 12,
     imagen: "https://res.cloudinary.com/dnju3aw4b/image/upload/v1703876883/hbomax/la_brea-152400874-mmed_ltu50o.jpg",
