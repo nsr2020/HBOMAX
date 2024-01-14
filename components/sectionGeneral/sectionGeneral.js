@@ -8,11 +8,13 @@ import { seriesTerror } from '../../data/seriesTerror.js'
 import { seriesComedia } from '../../data/seriesComedia.js'
 import { articleGenerator } from '../../utils/articleGenerator.js'
 
+
 import { apagarGeneralSection, encenderGeneralSection } from '../../utils/InterruptorGeneralSection.js'
 
 import './sectionGeneral.css'
 import { apagarFooter } from '../../utils/interruptorFooter.js'
 import { createDivMenu, divMenu } from '../divMenu/divMenu.js'
+import { trailers2024 } from '../../data/trailers2024.js'
 
 
 export const sectionGeneral = document.createElement('section')
@@ -41,7 +43,7 @@ export const createGeneralSection = (teatro) => {
   })
 
   if (teatro === 'todo' || teatro === undefined) {
-    console.log(teatro)
+   articleGenerator(trailers2024, sectionGeneral)
     articleGenerator(pelisAccion, sectionGeneral)
     articleGenerator(pelisAventura, sectionGeneral)
     articleGenerator(pelisComedia, sectionGeneral)
@@ -52,6 +54,7 @@ export const createGeneralSection = (teatro) => {
     articleGenerator(seriesTerror, sectionGeneral)
   } else if (teatro === 'peliculas') {
     console.log(teatro)
+    articleGenerator(trailers2024, sectionGeneral)
     articleGenerator(pelisAccion, sectionGeneral)
     articleGenerator(pelisAventura, sectionGeneral)
     articleGenerator(pelisComedia, sectionGeneral)

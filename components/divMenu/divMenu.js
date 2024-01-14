@@ -1,4 +1,4 @@
-const tipos =["Accion","Aventura","Comedia","Terror"]
+const tipos =["Accion","Aventura","Comedia","Terror","Novedades"]
 
 
 import { pelisAccion } from "../../data/pelisAccion"
@@ -9,6 +9,7 @@ import { seriesAccion } from "../../data/seriesAccion"
 import { seriesAventura } from "../../data/seriesAventura"
 import { seriesComedia } from "../../data/seriesComedia"
 import { seriesTerror } from "../../data/seriesTerror"
+import { trailers2024 } from "../../data/trailers2024"
 
 import { encenderGeneralSection } from "../../utils/InterruptorGeneralSection"
 import { encenderFooter } from "../../utils/interruptorFooter"
@@ -62,10 +63,14 @@ export const createDivMenu = () =>{
           sectionType.style.display = "flex";
           divMenu.style.display = "none";
           createSectionType(pelisComedia);
-        } else {
+        } else if(a.classList.contains("Terror")) {
           sectionType.style.display = "flex";
           divMenu.style.display = "none";
           createSectionType(pelisTerror);
+        }else{
+          sectionType.style.display = "flex";
+          divMenu.style.display = "none";
+          createSectionType(trailers2024);
         }
         resolve();
       });
